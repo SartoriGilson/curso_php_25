@@ -1,4 +1,7 @@
 
 <?php 
-echo "Gilson"
+
+echo phpinfo(); // mosta as informações do PHP
+
 ?>
+
