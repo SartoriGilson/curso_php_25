@@ -12,8 +12,9 @@
 - Para fazer comit no terminal
     - git add .
     - git commit -m "nome do commit que desejar"
-no erro que der colocar email e senha git config --global user.email "seu email aqui"
-                                      git config --global user.name "nome de usuario"
+no erro que der colocar email e senha 
+        git config --global user.email "seu email aqui"
+        git config --global user.name "nome de usuario"
     - git commit -m "nome do commit que desejar"
     - git push
-    
+
