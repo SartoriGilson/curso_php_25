@@ -17,5 +17,5 @@
     - git config --global user.name "nome de usuario"
 - apos executar novamente
     - git commit -m "nome do commit que desejar"
-    - git push
+    - `git push`
 
