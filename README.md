@@ -26,6 +26,6 @@
     - git status para confirmar
     -> repetir os passos de add acima para inserir as modificações na branch
 
-## Tema de casa
+## Bora fazer algo em casa
 
 
