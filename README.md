@@ -19,3 +19,12 @@
     - git commit -m "nome do commit que desejar"
     - `git push`
 
+- Para criar branch pelo terminal.
+    - git checkout -b nome-da-branch -> criar e trocar para a branch copiar bseado na que está
+    - git branch -> para verificar se está okgit checkout main
+    - git push --set-upstream origin nome da branch
+    - git status para confirmar
+    -> repetir os passos de add acima para inserir as modificações na branch
+    - 
+
+
