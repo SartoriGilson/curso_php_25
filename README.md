@@ -25,7 +25,6 @@
     - git push --set-upstream origin nome da branch
     - git status para confirmar
     -> repetir os passos de add acima para inserir as modificações na branch
-    - 
 
 ## Tema de casa
 
