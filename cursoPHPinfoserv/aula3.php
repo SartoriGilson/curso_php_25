@@ -24,8 +24,11 @@ $seuCPF = "1234567890";
 echo "Hello, <b>World!!</b></br>"; // tag html para quebra de linha.
 
 
-echo "Seu CPF é de $seuCPF \n";
-echo "Seu CPF é de " . SEU_CPF . "\n";
+echo "Seu CPF é de $seuCPF </br>";
+echo "Seu CPF é de " . SEU_CPF . "</br>";
+
+echo "Seu CPF é de SEU_CPF </br>";
+echo "Seu CPF é de {SEU_CPF} </br>";
 
 
 
