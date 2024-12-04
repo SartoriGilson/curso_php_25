@@ -1,11 +1,11 @@
 <?php 
 
-const SEU_CPF = '00978964039';
-$seuCPF = "00978964039";
+const SEU_CPF = '1234567890';
+$seuCPF = "1234567890";
 
     class Caneta{
         // Atributos e/ou propriedades
-        public const PLASTICO = true;
+        public const PLASTICO = true; // usar public, private ou protect somente quando estão dentro de classes.
         public $nome;
         public $cor; 
         public $tipoMaterial = "Plastico";
@@ -21,10 +21,27 @@ $seuCPF = "00978964039";
         }
     };
 
-echo "Hello, <b>World!!</b><br/>"; // tag html para quebra de linha.
-echo "Seu CPF é de $seuCPF";
-echo "Seu CPF é de " . SEU_CPF;
+echo "Hello, <b>World!!</b></br>"; // tag html para quebra de linha.
+
+
+echo "Seu CPF é de $seuCPF \n";
+echo "Seu CPF é de " . SEU_CPF . "\n";
+
+
 
 // fazer a tabuada e mostrar na tela de tema de casa.
+
+
+
+function tabuada($num) {
+    for ($i = 0; $i <= 10; $i++) {
+        $resposta = $i * $num;
+        echo "$i x $num = $resposta\n";
+    };
+}; 
+
+$numero = 6;
+
+tabuada($numero);
 
 ?>
