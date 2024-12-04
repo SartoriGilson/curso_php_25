@@ -7,22 +7,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Calculadora</h1>
-    <div class="resultado">
-    <?php 
-        function tabuada($num) {
-            for ($i = 0; $i <= 10; $i++) {
-                $resposta = $i * $num;
-                echo "$i x $num = $resposta</br>";
-            };
-        }; 
-        
-        $numero = 6;
-        
-        tabuada($numero);       
+    <?php
+    $numero = 8;   
     ?>
-    </div>
-    
-    
+    <h1>Calculando a tabuada do <?php echo $numero?></h1>
+    <div class="resultado">
+        <?php 
+            function tabuada($num) {
+                for ($i = 0; $i <= 10; $i++) {
+                    $resposta = $i * $num;
+                    echo "$i x $num = $resposta</br>";
+                };
+            };                  
+            tabuada($numero);      
+        ?>           
+    </div>   
 </body>
 </html>
