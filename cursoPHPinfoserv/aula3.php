@@ -17,10 +17,15 @@ $seuCPF = "00978964039";
         }
 
         public function pintar() {
-            
+
         }
     };
 
+echo "Hello, <b>World!!</b><br/>"; // tag html para quebra de linha.
+echo "Seu CPF é de $seuCPF";
+echo "Seu CPF é de " . SEU_CPF;
 
+
+// fazer a tabuada e mostrar na tela de tema de casa.
 
 ?>
