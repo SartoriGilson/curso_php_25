@@ -13,13 +13,7 @@
     <h1>Calculando a tabuada do <?php echo $numero?></h1>
     <div class="resultado">
         <?php 
-            function tabuada($num) {
-                for ($i = 0; $i <= 10; $i++) {
-                    $resposta = $i * $num;
-                    echo "$i x $num = $resposta</br>";
-                };
-            };                  
-            tabuada($numero);      
+            //Seu programa da tabuada nessa parte do código      
         ?>           
     </div>   
 </body>
