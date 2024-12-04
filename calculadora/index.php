@@ -13,7 +13,7 @@
     <h1>Calculando a tabuada do <?php echo $numero?></h1>
     <div class="resultado">
         <?php 
-            //Seu programa da tabuada nessa parte do código      
+            // Seu programa da tabuada nessa parte do código;      
         ?>           
     </div>   
 </body>
