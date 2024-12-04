@@ -1,0 +1,123 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+:root{
+    --color-background: #000000;
+    --color-text: #F6F6F6;
+    --color-destaque: #a95400;
+    --color-hover: #092a8b;
+
+    --fonte-primaria: 'Open Sans', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    box-sizing: border-box;
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+.menu{
+    padding: 2% 0% 0% 5%; /*superior, inferior, lat direita, lateral esquerda*/
+}
+.menu__button{
+    display: flex;
+    gap: 30px;
+}
+.menu__button__link{
+    font-family: var(--fonte-secundaria);
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--color-text);
+    text-decoration: none;
+    border: solid;
+    border-radius: 8px;
+    border-color: var(--color-text);
+    padding: 1%;
+}
+.menu__button__link:hover{
+    background-color: var(--color-hover);
+}
+
+.corpo{
+    padding: 5% 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+.corpo__descricao{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 25px;
+}
+.corpo__descricao__titulo{
+    font-size: 3.3rem;
+    font-family: var(--fonte-secundaria);
+    font-weight: 400;
+}
+.corpo__descricao__texto{
+    font-size: 1.3rem;
+    font-family: var(--fonte-primaria);
+}
+.corpo__descricao__texto__destaque{
+    color: var(--color-destaque);
+}
+.corpo__descricao__midias{
+    display: flex;
+    justify-content: center;   
+    gap: 20px;
+    padding-top: 5%;
+}
+.corpo__descricao__midias__titulo{
+    font-size: 2rem;
+    font-family: var(--fonte-secundaria);
+    font-weight: 300;
+}
+.corpo__descricao__midias__link{
+    display: flex;
+    gap: 20px;
+}
+.botao img{
+    width: 40px;
+    height: 40px;
+}
+.corpo__imagem{
+    width: 30%;
+    border-radius: 20px;
+}
+.rodape{
+    background-color: var(--color-hover);
+    color: var(--color-text);
+    font-size: 1rem;
+    padding: 10px;
+    text-align: center;
+}
+
+@media (max-width: 1200px) {
+    .menu{
+         padding: 10%;  
+    }
+    .menu__button{
+        justify-content: center;
+    }
+    .corpo{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .corpo__descricao{
+        width: auto;
+    }
+}
+
+/*
+.principal {                                     /* para adicionar uma imagem ao background
+    background-image: url(“img/Background.png”);
+    }*/
