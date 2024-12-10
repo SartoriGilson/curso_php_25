@@ -32,9 +32,6 @@ echo "Seu CPF é de {SEU_CPF} </br>";
 
 
 
-// fazer a tabuada e mostrar na tela de tema de casa.
-
-
 
 
 
