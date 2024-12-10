@@ -6,7 +6,7 @@ $seuCPF = "1234567890";
 $classe = new stdClass();
 
 class Caneta{
-    // Atributos e/ou propriedades
+    // Atributos e/ou propriedades descrever  oque é para o digital
     public const PLASTICO = true; // usar public, private ou protect somente quando estão dentro de classes.
     public $nome;
     public $cor; 
@@ -21,6 +21,14 @@ class Caneta{
 
     public function pintar() {
         
+    }
+
+    public function getTinta() { // get é pegar
+        return false;
+    }
+
+    public function setTinta() { // set é tipo recarregar
+        return true;
     }
 };
 
