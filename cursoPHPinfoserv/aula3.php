@@ -36,15 +36,6 @@ echo "Seu CPF é de {SEU_CPF} </br>";
 
 
 
-function tabuada($num) {
-    for ($i = 0; $i <= 10; $i++) {
-        $resposta = $i * $num;
-        echo "$i x $num = $resposta\n";
-    };
-}; 
 
-$numero = 6;
-
-tabuada($numero);
 
 ?>
