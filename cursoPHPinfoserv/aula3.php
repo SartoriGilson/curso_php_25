@@ -3,25 +3,33 @@
 const SEU_CPF = '1234567890';
 $seuCPF = "1234567890";
 
-    class Caneta{
-        // Atributos e/ou propriedades
-        public const PLASTICO = true; // usar public, private ou protect somente quando estão dentro de classes.
-        public $nome;
-        public $cor; 
-        public $tipoMaterial = "Plastico";
-        public $dimensoes; 
-        public $tipo; 
+$classe = new stdClass();
 
-        // para ações usamos funções
-        public function escrever() {
-        }
+class Caneta{
+    // Atributos e/ou propriedades
+    public const PLASTICO = true; // usar public, private ou protect somente quando estão dentro de classes.
+    public $nome;
+    public $cor; 
+    public $tipoMaterial = "Plastico";
+    public $dimensoes; 
+    public $tipoPonta; 
 
-        public function pintar() {
+    // para ações usamos funções
+    public function escrever() {
 
-        }
-    };
+    }
 
-echo "Hello, <b>World!!</b></br>"; // tag html para quebra de linha.
+    public function pintar() {
+        
+    }
+};
+
+echo "Hello, <b> 
+                <i>
+                    World!!
+                </i>
+            </b>
+        </br>"; // tag html para quebra de linha. "b" para negrito e "i" para italico
 
 
 echo "Seu CPF é de $seuCPF </br>";
