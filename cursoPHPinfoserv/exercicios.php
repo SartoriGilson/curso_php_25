@@ -29,10 +29,8 @@ function ehPrimo($numero) {
     return true;
 }
 
-// Receber o número informado
 $numero = 11;
 
-// Verificar se é primo
 if (ehPrimo($numero)) {
     echo "O número $numero é primo.<br>";
 } else {
