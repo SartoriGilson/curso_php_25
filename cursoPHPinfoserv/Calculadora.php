@@ -1,8 +1,8 @@
 <?php 
 
-$numero1 = 5;
+$numero1 = 50;
 $numero2 = 2;
-$operador = "/";
+$operador = "#";
 
 
 if ($operador == "+") {
@@ -25,9 +25,15 @@ elseif ($operador == "/") {
         echo "A divisão do valores $numero1 por $numero2 é igual a $divisao";
     }        
 }
+elseif ($operador == "#") {
+    $percentual = $numero1 * ($numero2 / 100);
+    echo "$numero2% de $numero1 é $percentual";
+}
 else {
     echo "Operador inválido";
 } 
+
+// triangulo dado tres medidas informadas pelos usuario diga qual é o tipo do triangulo
 
 
 
