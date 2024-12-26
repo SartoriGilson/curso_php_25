@@ -31,9 +31,7 @@
     </style>
 </head>
 <body>
-
     <h1>CALENDÁRIO</h1>
-
     <div class="container">
         <form action="" method="POST">
             <label for="">Data</label>
@@ -42,22 +40,10 @@
         </form>
     </div>
     
-        <?php
-        // criar um algoritmo que simula o funcionamento de um calendário.
-        // variáveis: $data = '31/01/2025'
-        // Validar a data
-        // validar se o ano é bissexto
-        // Dica IF else
-
-        $data = $_POST['data'] ?? null;
-
-        //meses com 30 dias
+        <?php    
+        $data = $_POST['data'] ?? null;        
         $meses30 = [4,6,9,11];
-
-        //explode a variável $data em partes separadas por /
-        $partes = explode('/', $data);
-
-        //Validar se foi dividido em 3 partes separadas por /
+        $partes = explode('/', $data);        
         ?>
     
     <div class="validador">
@@ -67,10 +53,10 @@
                 exit;
             }
       
-        //colocando cada parte separada em um array
-        $dia = $partes[0]; // essa é a primeira parte da explosão
-        $mes = $partes[1]; // segunda
-        $ano = $partes[2]; // terceira
+       
+        $dia = $partes[0]; 
+        $mes = $partes[1]; 
+        $ano = $partes[2]; 
         
         //se não for númerico e não for tamanho 2/4
         if(!is_numeric($dia) || strlen($dia) != 2){
