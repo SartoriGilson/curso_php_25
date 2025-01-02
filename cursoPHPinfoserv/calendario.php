@@ -58,15 +58,15 @@
                 $ano = $partes[2];                 
             
                 if(!is_numeric($dia) || strlen($dia) != 2){
-                    echo "<br>Dia inválido";
+                    echo "<br>Dia inválido.";
                     exit;
                 }
                 if(!is_numeric($mes) || strlen($mes) != 2){
-                    echo "<br>Mês inválido";
+                    echo "<br>Mês inválido.";
                     exit;
                 }
                 if(!is_numeric($ano) || strlen($ano) != 4){
-                    echo "<br>Ano inválido";
+                    echo "<br>Ano inválido.";
                     exit;
                 }        
                 $dia = (int)$dia;
@@ -88,13 +88,9 @@
                             exit;
                         }
                         else {
-                            echo "<br> Voce forneceu a data $data ";
                             echo "<br>Esse mês tem 31 dias";
                         }
-                    }
-                    else{
-                        echo "<br>Você forneceu a data $data.";
-                    };
+                    };                     
                     if ($mes == 2) {
                         if ($dia > 29) {
                             echo "<br>Fevereiro não possui mais que 29 dias.";
@@ -103,19 +99,16 @@
 
                         $bissexto = ($ano % 4 == 0 && $ano % 100 != 0) || ($ano % 400 == 0);
             
-                        if ($dia <= 29 && !$bissexto) {
-                            if ($dia < 29) {
-                                echo "<br> Voce forneceu a data $data ";
-                            }                            
+                        if ($dia <= 29 && !$bissexto) {                          
                             echo "<br>O ano fornecido não é um ano bissesto.";
                         }
                         else {
-                            echo "<br> Voce forneceu a data $data ";
                             echo "<br>O ano fornecido é conisderado um ano bissesto.";                             
-                        };
-                    };     
-                }               
-            }             
+                        };    
+                    };
+                echo "<br> Voce forneceu a data $data ";     
+                };               
+            };            
         ?>
     </div>
 </body>
