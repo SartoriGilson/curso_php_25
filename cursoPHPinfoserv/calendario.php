@@ -49,66 +49,70 @@
     <div class="validador">
         <?php
             if(count($partes) != 3){
-                echo '<br>Formato de data Inválido ou não digitado';
+                echo '<br>Faltam dados na digitação da data.';
                 exit;
-            }      
-       
-        $dia = $partes[0]; 
-        $mes = $partes[1]; 
-        $ano = $partes[2]; 
-        
-        //se não for númerico e não for tamanho 2/4
-        if(!is_numeric($dia) || strlen($dia) != 2){
-            echo "<br>Dia inválido";
-            exit;
-        }
-        if(!is_numeric($mes) || strlen($mes) != 2){
-            echo "<br>Mês inválido";
-            exit;
-        }
-        if(!is_numeric($ano) || strlen($ano) > 4){
-            echo "<br>Ano inválido";
-            exit;
-        }
-        
-        echo "<br>" . $data . " - Formato digitado corretamente!<br>";
-
-        //isso é para converter os dados em inteiro
-        $dia = (int)$dia;
-        $mes = (int)$mes;
-        $ano = (int)$ano;
-        
-        if($dia < 1 || $dia > 31){
-            echo "Digite uma data válida (1-31) >> " . $dia;
-            exit;
-        }
-        if($mes < 1 || $mes > 12){
-            echo "Digite um mês válido (1-12) >> " . $mes;
-            exit;
-        }
-        
-        //dentro da variável $mes, tem algum número do array $meses30?
-        if ($dia == 31) {
-            if(in_array($mes, $meses30) && $dia > 30){
-                echo "Esse mês não tem 31 dias";
-                exit;
-            }
-        };
-        if ($mes == 2) {
-            if ($dia > 29) {
-                echo "Fevereiro não possui mais que 29 dias.";
-                exit;
-            };
-
-            $bissexto = ($ano % 4 == 0 && $ano % 100 != 0) || ($ano % 400 == 0);
-
-            if ($dia == 29 && !$bissexto) {
-                echo "O ano fornecido não foi/será um ano bissesto";
             }
             else {
-                echo " O ano fornecido foi/é um ano bissesto";
-            };
-        };
+                $dia = $partes[0]; 
+                $mes = $partes[1]; 
+                $ano = $partes[2];                 
+            
+                if(!is_numeric($dia) || strlen($dia) != 2){
+                    echo "<br>Dia inválido";
+                    exit;
+                }
+                if(!is_numeric($mes) || strlen($mes) != 2){
+                    echo "<br>Mês inválido";
+                    exit;
+                }
+                if(!is_numeric($ano) || strlen($ano) != 4){
+                    echo "<br>Ano inválido";
+                    exit;
+                }        
+                $dia = (int)$dia;
+                $mes = (int)$mes;
+                $ano = (int)$ano;
+                
+                if($dia < 1 || $dia > 31 && $mes != 2) {
+                    echo "<br>Digite uma data válida (1-31) >> " . $dia;
+                    exit;
+                }
+                if($mes < 1 || $mes > 12) {
+                    echo "<br>Digite um mês válido (1-12) >> " . $mes;
+                    exit;
+                }
+                else {                              
+                    if ($dia == 31) {
+                        if(in_array($mes, $meses30) && $dia > 30){
+                            echo "<br>Esse mês não tem 31 dias";
+                            exit;
+                        }
+                        else {
+                            echo "<br> Voce forneceu a data $data ";
+                            echo "<br>Esse mês tem 31 dias";
+                        }
+                    };
+                    if ($mes == 2) {
+                        if ($dia > 29) {
+                            echo "<br>Fevereiro não possui mais que 29 dias.";
+                            exit;
+                        };
+
+                        $bissexto = ($ano % 4 == 0 && $ano % 100 != 0) || ($ano % 400 == 0);
+            
+                        if ($dia <= 29 && !$bissexto) {
+                            if ($dia < 29) {
+                                echo "<br> Voce forneceu a data $data ";
+                            }                            
+                            echo "<br>O ano fornecido não é um ano bissesto.";
+                        }
+                        else {
+                            echo "<br> Voce forneceu a data $data ";
+                            echo "<br>O ano fornecido é conisderado um ano bissesto.";                             
+                        };
+                    };     
+                }                
+            }             
         ?>
     </div>
 </body>
