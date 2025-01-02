@@ -83,14 +83,17 @@
                 }
                 else {                              
                     if ($dia == 31) {
-                        if(in_array($mes, $meses30) && $dia > 30){
-                            echo "<br>Esse mês não tem 31 dias";
+                        if(in_array($mes, $meses30)){
+                            echo "<br>O mês informado não possui 31 dias";
                             exit;
                         }
                         else {
                             echo "<br> Voce forneceu a data $data ";
                             echo "<br>Esse mês tem 31 dias";
                         }
+                    }
+                    else{
+                        echo "<br>Você forneceu a data $data.";
                     };
                     if ($mes == 2) {
                         if ($dia > 29) {
@@ -111,7 +114,7 @@
                             echo "<br>O ano fornecido é conisderado um ano bissesto.";                             
                         };
                     };     
-                }                
+                }               
             }             
         ?>
     </div>
