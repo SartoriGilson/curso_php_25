@@ -101,9 +101,10 @@
             
                         if ($dia <= 29 && !$bissexto) {                          
                             echo "<br>O ano fornecido não é um ano bissesto.";
+                            exit;
                         }
                         else {
-                            echo "<br>O ano fornecido é conisderado um ano bissesto.";                             
+                            echo "<br>O ano fornecido é conisderado um ano bissesto.";                                                         
                         };    
                     };
                 echo "<br> Voce forneceu a data $data ";     
