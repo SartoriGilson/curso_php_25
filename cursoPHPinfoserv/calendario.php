@@ -31,7 +31,7 @@
     </style>
 </head>
 <body>
-    <h1>CALENDÁRIO</h1>
+    <h1> Simulador de CALENDÁRIO</h1>
     <div class="container">
         <form action="" method="POST">
             <label for="">Data</label>
@@ -67,7 +67,7 @@
             echo "<br>Mês inválido";
             exit;
         }
-        if(!is_numeric($ano) || strlen($ano) != 4){
+        if(!is_numeric($ano) || strlen($ano) > 4){
             echo "<br>Ano inválido";
             exit;
         }
@@ -96,10 +96,11 @@
         
         if ($mes == 2) {
             $bissexto = ($ano % 4 == 0 && $ano % 100 != 0) || ($ano % 400 == 0);
-            
             if ($dia > 29 || ($dia == 29 && !$bissexto)) {
-                echo "Fevereiro em " . $ano . " não tem/teve " . $dia . " dias!";
-                exit;
+                echo "O ano fornecido não foi um ano bissesto";
+            }
+            else {
+                echo " O ano fornecido foi/é un ano bissesto";
             }
         }
         ?>
