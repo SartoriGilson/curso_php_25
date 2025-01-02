@@ -51,8 +51,7 @@
             if(count($partes) != 3){
                 echo '<br>Formato de data Inválido ou não digitado';
                 exit;
-            }
-      
+            }      
        
         $dia = $partes[0]; 
         $mes = $partes[1]; 
@@ -72,7 +71,7 @@
             exit;
         }
         
-        echo "<br>" . $data . " - Formato de data ok!<br>";
+        echo "<br>" . $data . " - Formato digitado corretamente!<br>";
 
         //isso é para converter os dados em inteiro
         $dia = (int)$dia;
@@ -80,29 +79,36 @@
         $ano = (int)$ano;
         
         if($dia < 1 || $dia > 31){
-            echo "Dia inexistente >> " . $dia;
+            echo "Digite uma data válida (1-31) >> " . $dia;
             exit;
         }
         if($mes < 1 || $mes > 12){
-            echo "Mês inexistente >> " . $mes;
+            echo "Digite um mês válido (1-12) >> " . $mes;
             exit;
         }
         
         //dentro da variável $mes, tem algum número do array $meses30?
-        if(in_array($mes, $meses30) && $dia > 30){
-            echo "Esse mês não tem 31 dias";
-            exit;
-        }
-        
+        if ($dia == 31) {
+            if(in_array($mes, $meses30) && $dia > 30){
+                echo "Esse mês não tem 31 dias";
+                exit;
+            }
+        };
         if ($mes == 2) {
+            if ($dia > 29) {
+                echo "Fevereiro não possui mais que 29 dias.";
+                exit;
+            };
+
             $bissexto = ($ano % 4 == 0 && $ano % 100 != 0) || ($ano % 400 == 0);
-            if ($dia > 29 || ($dia == 29 && !$bissexto)) {
-                echo "O ano fornecido não foi um ano bissesto";
+
+            if ($dia == 29 && !$bissexto) {
+                echo "O ano fornecido não foi/será um ano bissesto";
             }
             else {
-                echo " O ano fornecido foi/é un ano bissesto";
-            }
-        }
+                echo " O ano fornecido foi/é um ano bissesto";
+            };
+        };
         ?>
     </div>
 </body>
