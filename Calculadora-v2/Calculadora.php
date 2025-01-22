@@ -3,11 +3,21 @@
 class Calculadora {
     public $valor1 = 0;
     public $valor2 = 0;
+    public $operador = "";
     public $resultado = 0;
 
-    public function somar($num1, $num2) {
+    public function __construct($num1, $num2)
+    {
+        $this->set($num1 , $num2);
+    }
+
+    public function set($num1, $num2)
+    {
         $this->valor1 = $num1;
         $this->valor2 = $num2;
+    }
+
+    public function somar($num1, $num2) {
         $this->operador = "+";
         $this->resultado = $this->valor1 + $this->valor2;
 
@@ -51,7 +61,10 @@ class Calculadora {
 
 }
 
-$calculadora = new Calculadora();
-echo $calculadora->somar(10,10);
-echo $calculadora->subtrair(10,10);
+
+$num1 = 10;
+$num2 = 10;
+$calculadora = new Calculadora($num1,$num2);
+echo $calculadora->somar();
+echo $calculadora->subtrair();
 ?>
